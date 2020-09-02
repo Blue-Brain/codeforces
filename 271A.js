@@ -1,3 +1,20 @@
+var sourceYear = +readline();
+var outputYear = new Set();
+while (outputYear.size < 4) {
+    var setYear = new Set();
+    var splitYear = String(++sourceYear).split("");
+    setYear.add(splitYear[0]);
+    setYear.add(splitYear[1]);
+    setYear.add(splitYear[2]);
+    setYear.add(splitYear[3]);
+    outputYear = setYear;
+}
+var result = [];
+outputYear.forEach((elem) => {
+   result.push(elem);
+});
+print(result.join(''));
+
 // Красивый год (перебор)
 
 // Кажется, еще совсем недавно наступил новый 2013 год. А знали ли Вы забавный факт о том, что 2013 год является первым годом после далекого 1987 года, 
@@ -21,20 +38,3 @@
 // 2013
 // выходные данные
 // 2014
-
-var sourceYear = +readline();
-var outputYear = new Set();
-while (outputYear.size < 4) {
-    var setYear = new Set();
-    var splitYear = String(++sourceYear).split("");
-    setYear.add(splitYear[0]);
-    setYear.add(splitYear[1]);
-    setYear.add(splitYear[2]);
-    setYear.add(splitYear[3]);
-    outputYear = setYear;
-}
-var result = [];
-outputYear.forEach((elem) => {
-   result.push(elem);
-});
-print(result.join(''));

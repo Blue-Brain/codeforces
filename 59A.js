@@ -1,3 +1,15 @@
+var sourceText = readline();
+var upperSymbol = 0;
+var lowerSymbol = 0;
+for (var i=0; i<sourceText.length; i++) {
+    if(sourceText.charCodeAt(i) >= 65 && sourceText.charCodeAt(i) <= 90) {
+        upperSymbol++;
+    } else {
+        lowerSymbol++;
+    }
+}
+lowerSymbol >= upperSymbol ? print(sourceText.toLowerCase()) : print(sourceText.toUpperCase());
+
 // Слово (реализация строки)
 
 // Васю очень огорчает, что многие люди в интернете смешивают маленькие и большие буквы в одном слове. Поэтому он решил разработать расширение для своего любимого браузера, которое меняет регистр букв в каждом слове так, чтобы оно либо состояло только из маленьких букв, либо, наоборот, только из больших. При этом в слове должно измениться как можно меньше букв. Например, слово HoUse должно замениться на house, а слово ViP — на VIP. В случае, если в слове содержится одинаковое количество маленьких и больших букв, нужно заменить все буквы на маленькие. Например, maTRIx нужно заменить на matrix. Ваша задача — обработать указанным способом одно заданное слово.
@@ -21,15 +33,3 @@
 // maTRIx
 // выходные данные
 // matrix
-
-var sourceText = readline();
-var upperSymbol = 0;
-var lowerSymbol = 0;
-for (var i=0; i<sourceText.length; i++) {
-    if(sourceText.charCodeAt(i) >= 65 && sourceText.charCodeAt(i) <= 90) {
-        upperSymbol++;
-    } else {
-        lowerSymbol++;
-    }
-}
-lowerSymbol >= upperSymbol ? print(sourceText.toLowerCase()) : print(sourceText.toUpperCase());

@@ -1,3 +1,6 @@
+var positiveNumber = +readline();
+print (Math.pow(-1, positiveNumber) === 1 ? positiveNumber/2 : -((positiveNumber+1)/2));
+
 // Подсчёт функции (математика, реализация)
 
 // Для положительного целого числа n определим функцию f:
@@ -21,6 +24,3 @@
 // 5
 // выходные данные
 // -3
-
-var positiveNumber = +readline();
-print (Math.pow(-1, positiveNumber) === 1 ? positiveNumber/2 : -((positiveNumber+1)/2));

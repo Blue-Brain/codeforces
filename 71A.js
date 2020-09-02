@@ -1,3 +1,12 @@
+var n = readline()
+for (var i=0; i<n; i++) {
+    var word = readline().split('');
+    if (word.length>10){
+        var transformWord = word[0]+(word.length-2)+word[word.length-1];
+        print(transformWord);
+    } else print(word.join(''));
+}
+
 // Слишком длинные слова
 // Иногда некоторые слова вроде «localization» или «internationalization» настолько длинны, что их весьма утомительно писать много раз в каком либо тексте.
 
@@ -27,12 +36,3 @@
 // l10n
 // i18n
 // p43s
-
-var n = readline()
-for (var i=0; i<n; i++) {
-    var word = readline().split('');
-    if (word.length>10){
-        var transformWord = word[0]+(word.length-2)+word[word.length-1];
-        print(transformWord);
-    } else print(word.join(''));
-}

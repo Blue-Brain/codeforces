@@ -1,3 +1,15 @@
+var numberRooms = readline();
+var numberFreeRooms = 0;
+for (var n=0; n < numberRooms; n++) {
+    var roomInfo = readline().split(' ');
+    var numberOccupiedPlace = roomInfo[0]; 
+    var numberSeatsRoom = roomInfo[1];
+    if (numberSeatsRoom-numberOccupiedPlace >= 2) {
+        numberFreeRooms++;
+    }
+}
+print(numberFreeRooms);
+
 // Юра и заселение (реализация)
 
 // Недавно Юра поступил в БГУКП (Берляндский Государственный Университет Крутых Программистов). У Юры есть друг Леша, который поступил вместе с ним, 
@@ -30,15 +42,3 @@
 // 10 10
 // выходные данныеСкопировать
 // 2
-
-var numberRooms = readline();
-var numberFreeRooms = 0;
-for (var n=0; n < numberRooms; n++) {
-    var roomInfo = readline().split(' ');
-    var numberOccupiedPlace = roomInfo[0]; 
-    var numberSeatsRoom = roomInfo[1];
-    if (numberSeatsRoom-numberOccupiedPlace >= 2) {
-        numberFreeRooms++;
-    }
-}
-print(numberFreeRooms);

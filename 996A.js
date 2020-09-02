@@ -1,3 +1,25 @@
+var amountBank = +readline();
+var numberCash = 0;
+while (amountBank>0) {
+    if (amountBank>=100) {
+        numberCash = numberCash + Math.floor(amountBank/100);
+        amountBank = amountBank % 100;
+    } else if (amountBank>=20) {
+        numberCash = numberCash + Math.floor(amountBank/20);
+        amountBank = amountBank % 20;
+    } else if (amountBank>=10) {
+        numberCash = numberCash + Math.floor(amountBank/10);
+        amountBank = amountBank % 10;
+    } else if (amountBank>=5) {
+        numberCash = numberCash + Math.floor(amountBank/5);
+        amountBank = amountBank % 5;
+    } else if (amountBank>=1) {
+        numberCash++;
+        amountBank--;
+    } 
+}
+print(numberCash);
+
 // Выиграть в лотерею (жадные алгоритмы)
 
 // У Аллена много денег, а именно, на счету в банке у него n долларов. По соображениям безопасности он хочет снять всю сумму наличными, мы не будет здесь описывать эти соображения. Номиналы долларовых купюр равны 1, 5, 10, 20, 100. Какое минимальное число купюр должен получить Аллен после того, как снимет все деньги?
@@ -27,25 +49,3 @@
 // Во втором примере Аллен может получить две 20-долларовые купюры и три купюры в 1 доллар.
 
 // В третьем примере Аллен может снять 100000000 (десять миллионов!) 100-долларовых купюр.
-
-var amountBank = +readline();
-var numberCash = 0;
-while (amountBank>0) {
-    if (amountBank>=100) {
-        numberCash = numberCash + Math.floor(amountBank/100);
-        amountBank = amountBank % 100;
-    } else if (amountBank>=20) {
-        numberCash = numberCash + Math.floor(amountBank/20);
-        amountBank = amountBank % 20;
-    } else if (amountBank>=10) {
-        numberCash = numberCash + Math.floor(amountBank/10);
-        amountBank = amountBank % 10;
-    } else if (amountBank>=5) {
-        numberCash = numberCash + Math.floor(amountBank/5);
-        amountBank = amountBank % 5;
-    } else if (amountBank>=1) {
-        numberCash++;
-        amountBank--;
-    } 
-}
-print(numberCash);
